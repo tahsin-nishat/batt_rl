@@ -1,0 +1,23 @@
+# Files not to ignore
+*
+!.gitignore
+!AUTHORS.rst
+!CONTRIBUTING.rst
+!HISTORY.rst
+!installation.rst
+!LICENSE
+!README.rst
+!qos-pypackage/
+!qos-pypackage/csi-beam/
+!qos-pypackage/csi-beam/data-gen/
+!qos-pypackage/csi-beam/data-gen*.py
+!qos-pypackage/csi-beam/sys-id/
+!qos-pypackage/csi-beam/sys-id*.py
+!qos-pypackage/csi-beam/setup.py
+!qos-pypackage/csi-beam/LICENSE.rst
+!qos-pypackage/csi-beam/README.rst
+!qos-pypackage/csi-beam/generated-file/
+!qos-pypackage/csi-beam/generated-file/node19-9data.npz
+!qos-pypackage/csi-beam/generated-file/node19data.npz
+!qos-pypackage/csi-beam/sysid/
+!qos-pypackage/csi-beam/sysid*.py
