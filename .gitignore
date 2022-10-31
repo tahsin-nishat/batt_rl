@@ -20,4 +20,4 @@
 !qos-pypackage/csi-beam/generated-file/node19-9data.npz
 !qos-pypackage/csi-beam/generated-file/node19data.npz
 !qos-pypackage/csi-beam/sysid/
-!qos-pypackage/csi-beam/sysid*.py
+!qos-pypackage/csi-beam/sysid/*.py
