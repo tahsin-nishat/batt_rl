@@ -64,6 +64,7 @@ develop a simulated environment where uniform battery degradation and maximizati
 model uses solar energy profile created 
 The 
 training and test results show the prominence of this algorithm in achieving effective battery health management systems.
+
 .. image:: Downloads/jindo bridge.jpg
     :width: 400
     :alt: Jindo Bridge sensor node configuration
