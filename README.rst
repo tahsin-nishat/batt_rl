@@ -51,6 +51,7 @@ node configuration. In this study, a mode shape-based quality index is proposed 
 In summary, this study aims to develop a framework for active battery health management for a real-life wireless sensor network while 
 maintaining the required quality of service (QoS) metrics at the system level.
 
+
 1. Active Control of Battery Degradation at the WSN system level:
 -----------------------------------------------------------------
 At first, an attempt is taken to develop a framework for WSNs to maintain uniform battery degradation at all sensor nodes while maximizing 

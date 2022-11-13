@@ -7,8 +7,8 @@
 !installation.rst
 !LICENSE
 !README.rst
-!doc
-!doc/figure
+!doc/
+!doc/figure/
 !doc/figure/jindo-bridge.png
 !qos-pypackage/
 !qos-pypackage/csi-beam/
