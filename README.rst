@@ -62,8 +62,10 @@ Following uncertainties are considered to simuate the realistic environment:
 a. The sensors are rechargeable with solar power. Solar energy varies at different days of the year depending on the weather. To include 
 the solar power variability, using System Advisor Model (SAM) solar profile data is generated for 2013 to 2019. These data are used during 
 training and testing of the model.
+
 b. Solar harvesting uncertainties due to spatial variation is considered. Figure 2 represents the solar harvesting uncertainties at 
 different sensor node configuration.
+
 c. Uncertaining in wireless communication is included in the model.
 
 Finally the The RL agent was trained under the developed RL environment to learn optimal nodes and duty cycles, meanwhile managing battery 
@@ -71,7 +73,7 @@ health at the network level. The agent is trained for 30 days period (with 3 hr 
 days data. During training, uniform battery degradation and maximization of the active duty cycle receive positive rewards. To this end, 
 the training and test results show the prominence of this algorithm in achieving effective battery health management of the WSN for SHM.
 
-.. image:: doc/figure/jindo bridge.png
+.. image:: doc/figure/jindo-bridge.png
     :width: 400
     :alt: Jindo Bridge sensor node configuration
 
