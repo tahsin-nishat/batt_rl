@@ -64,7 +64,7 @@ develop a simulated environment where uniform battery degradation and maximizati
 model uses solar energy profile created 
 The 
 training and test results show the prominence of this algorithm in achieving effective battery health management systems.
-.. image:: image.png
+.. image:: Downloads/jindo bridge.jpg
     :width: 400
     :alt: Jindo Bridge sensor node configuration
 To this end, a reinforcement learning (RL) based framework for active control of the battery degradation at the WSN system level is 
