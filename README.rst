@@ -52,11 +52,15 @@ In summary, this study aims to develop a framework for active battery health man
 maintaining the required quality of service (QoS) metrics at the system level.
 
 
-1. Active Control of Battery Degradation at the WSN system level:
+1. Active Control of Battery Degradation at the WSN system level
 -----------------------------------------------------------------
 At first, an attempt is taken to develop a framework for WSNs to maintain uniform battery degradation at all sensor nodes while maximizing 
 the number of active nodes. A reinforcement learning (RL) based simualated environment is devleoped to represent a realistic sensor node 
-configuration of Jindo Bridge (i.e. a cable stayed bridge in Korea). Figure 1 shows the 112 senosr node configuration.
+configuration of Jindo Bridge (i.e. a cable stayed bridge in Korea). The following figure shows the 112 senosr node configuration.
+
+.. image:: /doc/figures/jindo-bridge.png
+    :width: 400
+    :alt: Jindo Bridge sensor node configuration
 
 Following uncertainties are considered to simuate the realistic environment:
 
@@ -64,21 +68,28 @@ a. The sensors are rechargeable with solar power. Solar energy varies at differe
 the solar power variability, using System Advisor Model (SAM) solar profile data is generated for 2013 to 2019. These data are used during 
 training and testing of the model.
 
-b. Solar harvesting uncertainties due to spatial variation is considered. Figure 2 represents the solar harvesting uncertainties at 
-different sensor node configuration.
+b. Solar harvesting uncertainties due to spatial variation is considered. The following figure represents the solar harvesting uncertainties 
+at different sensor node configuration.
+
+.. image:: /doc/figures/solar-harvesting-uncertainties.png
+    :width: 400
+    :alt: Solar Harvesting Uncertainties at diiferent sensor node location
 
 c. Uncertaining in wireless communication is included in the model.
+
+.. image:: /doc/figures/training.png
+    :width: 400
+    :alt: Training results
+
 
 Finally the The RL agent was trained under the developed RL environment to learn optimal nodes and duty cycles, meanwhile managing battery 
 health at the network level. The agent is trained for 30 days period (with 3 hr interval data 240 steps in an episode) and tested on 360 
 days data. During training, uniform battery degradation and maximization of the active duty cycle receive positive rewards. To this end, 
-the training and test results show the prominence of this algorithm in achieving effective battery health management of the WSN for SHM.
+the training and test results show the prominence of this algorithm in achieving effective battery health management of the WSN for SHM. 
+The following figure shows the training result for 30 days
 
-.. image:: /doc/figures/jindo-bridge.png
-    :width: 400
-    :alt: Jindo Bridge sensor node configuration
 
-2. Intorducing Quality of Service metrics at the WSN system level (Ongoing):
+2. Introducing Quality of Service metrics at the WSN system level (Ongoing)
 ----------------------------------------------------------------------------
 In this ongoing part of the study, mode shape is introduced as a quality index to ensure desired the QoS for the network. In other words,
 the accuracy of the estimated mode shape would represent the performance of the network.
@@ -87,7 +98,16 @@ Modal analysis is required to define the QoS index at each node level to achieve
 simply supported bridge is considered for the modal analysis. For different sensor node configuration, estimated mode shape accuarcy will 
 vary. Depending on how much accuracy is required, a reference mode shape needs to be selected. Initially, 5 feet evenly spaced 19 sensor 
 nodes are considered as reference sensor node configuration and the obtained mode shape will be the reference mode shape. We want to focus 
-on obtaining up to mode number 5 and for the selected configuration these mode shapes can be detected with good accuracy.
+on obtaining up to mode number 5 and for the selected configuration these mode shapes can be detected with good accuracy. Following figures 
+show the reference sensor node configuration and obtained reference 5 mode shapes
+
+.. image:: /doc/figures/reference.png
+    :width: 400
+    :alt: Reference sensor nodes
+
+.. image:: /doc/figures/mode-shapes.png
+    :width: 400
+    :alt: Reference five mode shapes
 
 Output-based system identification is considered for the modal analysis. There are different output-based modal analysis methods available 
 e.g. Covariance driven stochastic system identification, Data driven system identification method etc. For this analysis, only covariance 
@@ -98,7 +118,7 @@ A python package is developed to automate the modal analysis of a simply support
 detailed description of how to use the python package for data generation and modal analysis is given in the "qos\qos-pypackage\csi-beam\readme"
 
 
-Funding Agency:
+Funding Agency
 ---------------
 The project is funded by the National Science Foundation (NSF).
 

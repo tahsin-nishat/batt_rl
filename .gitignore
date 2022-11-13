@@ -10,6 +10,10 @@
 !doc/
 !doc/figures/
 !doc/figures/jindo-bridge.png
+!doc/figures/solar-harvesting-uncertainties.png
+!doc/figures/training.png
+!doc/figures/reference.png
+!doc/figures/mode-shapes.png
 !qos-pypackage/
 !qos-pypackage/csi-beam/
 !qos-pypackage/csi-beam/data-gen/
