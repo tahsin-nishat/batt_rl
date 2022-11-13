@@ -2,7 +2,7 @@
 sysid
 =====
 
-Description of the "sysid" package:
+Description of the "sysid" package
 -----------------------------------
 This is a python package for system identification of a simply supported beam. There are different system identification methods available 
 for any structure (based on input and output data or output only data). However, in practice, measuring the input force properly is not 
@@ -51,19 +51,19 @@ or install directly from the python package index
 Usage
 -----
 
-1. Response Data Generation
----------------------------
+1. Response Data Generation:
+----------------------------
 You can use this file for simulating the response (i.e. displacement, velocity or acceleration) at different nodes due to ambient noise 
 (e.g. traffic load).
 
-* Open "data-gen.py". Define the location (`pos`) and position of sensor nodes (`s`). Define the moment of inertia, modulus of elasticity,
-mass density to generate response data .
+* Open "data-gen.py". Define the location (`pos`) and position of sensor nodes (`s`). Define the moment of inertia, modulus of elasticity, 
+   mass density to generate response data .
 
 * The current code generate the displacement as response data. You can also select to generate velocity or acceleration to be your response 
-data.
+   data.
 
 * After running the file you can create and save response data as `npz` format. It also saves the true natural frequencies, true damping ratios, 
-true mode shapes, sensor location which can be used for further analysis.
+   true mode shapes, sensor location which can be used for further analysis.
 
 The code example below shows how generate response data from different sensor node configuration
 
@@ -166,20 +166,20 @@ Finally you can make a comparison between reference and estimated mode shapes an
 * generate the response data (both for reference and estimation)
 
 * goto "sys-id". You can use the same file to whether you want to obtain the reference mode shape or make an estimation of mode shape for 
-different sensor node configuration other than reference configuration
+   different sensor node configuration other than reference configuration
 
 * Define the model order, number of blocks to be used for covariance.
 
-* In the stabilization diagram, pick the poles manually with the mouse click. It generates the mode shape diagram and gives you frequancy 
-and damping information. The following figure shows an example of stabilization diagram and picked plot for 9 sensor nodes.
+* In the stabilization diagram, pick the poles manually with the mouse click. It generates the mode shape diagram and gives you frequency 
+   and damping information. The following figure shows an example of stabilization diagram and picked plot for 9 sensor nodes.
 
 .. image:: /doc/figures/stabilization-diagram.png
    :width: 800
    :alt: stabilization-diagram
 
 * While making a comparison between two mode shapes, you need to import both the refernce mode shape data and the data to be used for 
-comparison. The following figure shows an example of compared mode shapes up to 5 in between reference mode shapes with 19 sensor nodes and 
-estimated mode shapes with 9 sensor nodes.
+   comparison. The following figure shows an example of compared mode shapes up to 5 in between reference mode shapes with 19 sensor nodes and 
+   estimated mode shapes with 9 sensor nodes.
 
 .. image:: /doc/figures/comparison.png
    :width: 800
