@@ -6,14 +6,15 @@ Active Battery Health Management
 Project summary:
 ------------------
 The Internet of Things (IoT) has become one of the major future trends. Its proliferation has led to an explosive number of battery powered
-wireless devices. Battery life has always been one of the biggest limiting factors of those wireless devices.
+wireless devices. Battery life has always been one of the biggest limiting factors of those wireless devices which poses different challenges
+thourghout their operation.
 
 This project deals with battery health management under battery group replacement requirement. In practice, there are many applications 
 where IoT wireless devices (sensors in particular) are installed at hard-to-reach areas or remote locations, where the planning and logistics
-of a maintennace trip can be very costly. To reduce the cost, battery group replacement is often required in these scenarios, e.g. replace all
-batteries in a sensor network on a maintenance trip, instead of repllacing just one or a few. Unfortunately, existing methods for battery
+of a maintennace trip can be very costly. To reduce the cost, battery group replacement is often required in these scenarios, i.e. replace all
+batteries in a sensor network on a maintenance trip, instead of replacing just one or a few. Unfortunately, existing methods for battery
 management exclusively aim to extend lifetime of individual batteries as much as possible, lacking a system level view. A consequence of 
-applying such algorithms is that batteries in a sensor network tend to fail at veru different times, posing significant difficulty on 
+applying such algorithms is that batteries in a sensor network tend to fail at very different times, posing significant difficulty on 
 planning and scheduling of group replacement activities.
 
 The research objective of this project is to develop an active battery health management framework such that batteries in a sensor network
@@ -24,26 +25,26 @@ are made possible by dynamically adjusting the quality of service levels assigne
 useful lifetime as a measure of battery health. The success of this project will significantly reduce the overall battery maintenance cost.
 
 
-Developing Quality of Service Metrics for Structural Health Monitoring (SHM):
------------------------------------------------------------------------------
-Wireless sensor network (WSN) based structural health monitoring has gained the attention of researchers due to its economic feasibility 
-and ease in the installation process.Considering common civil applications and reserve energy, a duty cycle strategy is adopted in the
-battery-powered wireless sensors. This means a subset of sensor nodes in a network remains active to detect the events of interest while 
-the other nodes are either idle or in sleep mode. Depending on the status (active, idle, or sleep), the battery degradation rate at each 
-node varies. Even if all the sensors work under similar operational conditions, degradation of the battery level is not uniform because 
-of many factors (e.g. battery charging rate, uncertainties due to communication, uncertainties due to weather, sensor locations, etc.). 
-Once the power level of a battery reaches its threshold efficiency, it needs to be replaced. However, the replacement of each battery can 
-impose huge labor costs because of some hard-to-reach places. Cost can include traveling, scheduling, and logistics of equipment and 
-personnel. In this case, group replacement of batteries is preferred, although some batteries can not utilize their full capacity. 
-Therefore, effective battery health management is imperative to make group replacement of batteries possible and consequently reduce labor
-costs without sacrificing the efficacy of obtained data. 
+Quality of Service (QoS) Metrics for Structural Health Monitoring (SHM):
+------------------------------------------------------------------------
+As a part of the project, this study focuses on battery health management through structural health monitoring (SHM) applications, which 
+heavily relies on battery-powered wireless sensor network (WSN) and often deployed at hard-to-reach places. Hence, it is an ideal IoT 
+application field which can be significantly benefited if the project is successful.
 
-This study focuses on developing a framework for WSNs to maintain uniform battery degradation at all sensor nodes and to maximize the 
-number of active nodes while ensuring a desired quality of service. A realistic sensor node configuration is considered in this study 
-where each of the batteries is rechargeable with solar power. Charging rate variability due to weather conditions and spatial variation, 
-uncertainties in communication between the nodes, and duty cycles are considered in the framework. Reinforcement Learning based algorithm 
-is implemented to develop a model where uniform battery degradation and maximization of the active duty cycle receive positive rewards. The
-training and test results show the prominence of this algorithm in achieving effective battery health management systems. Finally, a 
+WSN based structural health monitoring has gained the attention of researchers due to its economic feasibility and easy installation process. 
+Considering common civil applications and to reserve energy, a duty cycle strategy is often adopted in the wireless sensors. This means a 
+subset of sensor nodes in a network remains active to detect the events of interest while the other nodes are either idle or in sleep mode. 
+Depending on the status (active, idle, or sleep), the battery degradation rate at each node varies. Even if all the sensors work under 
+similar operational conditions, degradation of the battery level is not uniform due to variability in battery charging rate, uncertainties 
+due to weather, sensor locations, etc. Once the power level of a battery reaches its threshold efficiency, it needs to be replaced. To 
+reduce the labor cost, group replacement of batteries is preferred. However, variability in battery lifetime creates significant difficulty 
+for group replacement decision making. Existing literature in battery management only focus on individual battery lifetime instead of 
+system level which only increase battery life variability. The current study deals with system level battery management. However, for 
+mission critical civil structures, being able to detect the event of ineterst (e.g. extreme load, damage or crack growth) is very crucial. 
+Hence, this study aims to develop a framework for active battery health management for a real-life wireless sensor network while maintaining 
+the required quality of service (QoS) metrics of the system.
+
+ Finally, a 
 quality index is introduced which can ensure a desired quality of service (QoS) for the network. As an evaluation criterion to estimate 
 the accuracy of the health status of the structure, the modal shape parameter is considered. Orthogonality check at each node and for the 
 entire network is carried out in terms of modal shape. Then a threshold QoS index is defined which needs to be guaranteed during the sensor
@@ -51,8 +52,21 @@ network operation. The prospect of the developed framework is that it can become
 times for all the batteries, reducing labor costs for replacement without sacrificing the performance of the network. The framework, 
 although developed based on structural health monitoring applications, can be implemented in varieties of wireless IoT applications.
 
-Active Control of Battery Degradation at the WSN system level:
---------------------------------------------------------------
+1. Active Control of Battery Degradation at the WSN system level:
+-----------------------------------------------------------------
+At first, an attempt is taken to develop a framework for WSNs to maintain uniform battery degradation at all sensor nodes while maximizing 
+the number of active nodes. A reinforcement learning (RL) based simualated environment is devleoped to represent a realistic sensor node 
+configuration of Jindo Bridge (Korea). Figure 1 shows the 112 senosr node configuration The sensors are rechargeable with solar power. Hence, using System Advisor Model (SAM) solar profile 
+data is generated for 2013 to 2019. Solar harvesting uncertainties due to spatial variation are considered
+Charging rate variability due to weather conditions and spatial variation, uncertainties in communication 
+between the nodes, and duty cycle strategy are considered in the framework. Reinforcement Learning (RL) based algorithm is implemented to 
+develop a simulated environment where uniform battery degradation and maximization of the active duty cycle receive positive rewards. The 
+model uses solar energy profile created 
+The 
+training and test results show the prominence of this algorithm in achieving effective battery health management systems.
+.. image:: image.png
+    :width: 400
+    :alt: Jindo Bridge sensor node configuration
 To this end, a reinforcement learning (RL) based framework for active control of the battery degradation at the WSN system level is 
 propsed in this study with the aim of the battery group replacement. A comprehensive simulation environment was developed in a real-life 
 WSN setup, i.e. WSN for a cable-stayed bridge SHM, considering various practical uncertainties. The RL agent was trained under a developed 
