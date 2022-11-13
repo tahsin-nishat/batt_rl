@@ -59,7 +59,7 @@ the number of active nodes. A reinforcement learning (RL) based simualated envir
 configuration of Jindo Bridge (i.e. a cable stayed bridge in Korea). The following figure shows the 112 senosr node configuration.
 
 .. image:: /doc/figures/jindo-bridge.png
-    :width: 400
+    :width: 800
     :alt: Jindo Bridge sensor node configuration
 
 Following uncertainties are considered to simuate the realistic environment:
@@ -72,13 +72,13 @@ b. Solar harvesting uncertainties due to spatial variation is considered. The fo
 at different sensor node configuration.
 
 .. image:: /doc/figures/solar-harvesting-uncertainties.png
-    :width: 400
+    :width: 800
     :alt: Solar Harvesting Uncertainties at diiferent sensor node location
 
 c. Uncertaining in wireless communication is included in the model.
 
 .. image:: /doc/figures/training.png
-    :width: 400
+    :width: 800
     :alt: Training results
 
 
@@ -102,11 +102,11 @@ on obtaining up to mode number 5 and for the selected configuration these mode s
 show the reference sensor node configuration and obtained reference 5 mode shapes
 
 .. image:: /doc/figures/reference.png
-    :width: 400
+    :width: 800
     :alt: Reference sensor nodes
 
 .. image:: /doc/figures/mode-shapes.png
-    :width: 400
+    :width: 800
     :alt: Reference five mode shapes
 
 Output-based system identification is considered for the modal analysis. There are different output-based modal analysis methods available 
