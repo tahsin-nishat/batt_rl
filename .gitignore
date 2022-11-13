@@ -8,8 +8,8 @@
 !LICENSE
 !README.rst
 !doc/
-!doc/figure/
-!doc/figure/jindo-bridge.png
+!doc/figures/
+!doc/figures/jindo-bridge.png
 !qos-pypackage/
 !qos-pypackage/csi-beam/
 !qos-pypackage/csi-beam/data-gen/
