@@ -14,6 +14,9 @@
 !doc/figures/training.png
 !doc/figures/reference.png
 !doc/figures/mode-shapes.png
+!doc/figures/algorithm.png
+!doc/figures/stabilization-diagram.png
+!doc/figures/comparison.png
 !qos-pypackage/
 !qos-pypackage/csi-beam/
 !qos-pypackage/csi-beam/data-gen/

@@ -7,17 +7,22 @@ Description of the "sysid" package:
 This is a python package for system identification of a simply supported beam. There are different system identification methods available 
 for any structure (based on input and output data or output only data). However, in practice, measuring the input force properly is not 
 always straightforward (due to traffic load or other environmental uncertainties). Also, the material characteristics can not be determined 
-accurately. Therefore, output-based system identification is the only solution. The current package utilize the output based covariance driven
-stochastic system identification algorithm. We plot a stabilization diagram from response data and select the stable poles to identify 
+accurately. Therefore, output-based system identification is the practical solution. The current package utilize the output based covariance driven
+stochastic system identification algorithm. We plot a stabilization diagram from the response data and select the stable poles to identify 
 the natural frequencies, damping ratios and mode shapes. The response data are simulated by using several known parameters i.e. mass density, 
 modulus of elasticity, moment of inertia, length of the bridge and number of sensor nodes and locations. Practical response data can also 
 be used instead of simulated response data.
 
 The main objective of this package is to automate the data generation and system identification of a real-life bridge system particularly 
 for mode shapes for different sensor node configuration . We can set a reference mode shape for a specific sensor node configuration. Then 
-by varying the node configuration (number or location), we can compare the accuarcy of the obtained mode shapes to the reference mode shape.
+by varying the node configuration (number or location), we can compare the accuarcy of the obtained mode shapes to the reference mode shapes 
+in terms of modal assurance criteria (MAC) or Modal Scale Factor (MSF). The following figure represents the approach:
 
-A detailed description of how to use this package is given in the following sections:
+.. image:: /doc/figures/algorithm.png
+   :width: 600
+   :alt: Algorithm
+
+A detailed description of how to use this package is given in the following sections
 
 Installation
 ------------
@@ -46,16 +51,19 @@ or install directly from the python package index
 Usage
 -----
 
-1. Data Generation:
--------------------
+1. Response Data Generation
+---------------------------
 You can use this file for simulating the response (i.e. displacement, velocity or acceleration) at different nodes due to ambient noise 
 (e.g. traffic load).
 
 * Open "data-gen.py". Define the location (`pos`) and position of sensor nodes (`s`). Define the moment of inertia, modulus of elasticity,
-mass density to generate response data 
-* The current code generate the displacement as response data. You can also select to generate velocity or acceleration to be your response data.
+mass density to generate response data .
+
+* The current code generate the displacement as response data. You can also select to generate velocity or acceleration to be your response 
+data.
+
 * After running the file you can create and save response data as `npz` format. It also saves the true natural frequencies, true damping ratios, 
-true mode shapes, sensor location which can be used for further analysis
+true mode shapes, sensor location which can be used for further analysis.
 
 The code example below shows how generate response data from different sensor node configuration
 
@@ -142,19 +150,40 @@ The code example below shows how generate response data from different sensor no
    
    print("done")
 
-2. System Identification:
+
+The following figure shows the simulated response at node 1 and node 10
+
+.. image:: /doc/figures/response.png
+   :width: 600
+   :alt: response
+
+
+2. System Identification
 -------------------------
 You can use the package to identify natural frequencies, damping ratios and mode shapes from the generated data or practical response data.
 Finally you can make a comparison between reference and estimated mode shapes and save the information for further analysis.
 
 * generate the response data (both for reference and estimation)
+
 * goto "sys-id". You can use the same file to whether you want to obtain the reference mode shape or make an estimation of mode shape for 
 different sensor node configuration other than reference configuration
+
 * Define the model order, number of blocks to be used for covariance.
+
 * In the stabilization diagram, pick the poles manually with the mouse click. It generates the mode shape diagram and gives you frequancy 
-and damping information.
+and damping information. The following figure shows an example of stabilization diagram and picked plot for 9 sensor nodes.
+
+.. image:: /doc/figures/stabilization-diagram.png
+   :width: 800
+   :alt: stabilization-diagram
+
 * While making a comparison between two mode shapes, you need to import both the refernce mode shape data and the data to be used for 
-comparison
+comparison. The following figure shows an example of compared mode shapes up to 5 in between reference mode shapes with 19 sensor nodes and 
+estimated mode shapes with 9 sensor nodes.
+
+.. image:: /doc/figures/comparison.png
+   :width: 800
+   :alt: Mode shape comparison
 
 The code example below shows how the modes of a stochastic system can be obtained from measurements of the output `y`.
 
@@ -179,7 +208,7 @@ The code example below shows how the modes of a stochastic system can be obtaine
    # The following data is for the estimated mode shape with sensor node configuration different from reference node configuration
 
    s=np.array([0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1]) # Define the sensor location
-   data = np.load("responsedata.npz") 
+   data = np.load("response-data.npz") 
    y = data["y"]
    fs = data["fs"]
    true_f = data["true_frequencies"]
@@ -273,6 +302,6 @@ The code example below shows how the modes of a stochastic system can be obtaine
 
 Credits:
 --------
-1. A significant contribution for this package comes from the following github project (strid_):
+1. A significant contribution for this package comes from the following github project named strid_
 
   .. _strid: https://github.com/Gunnstein/strid

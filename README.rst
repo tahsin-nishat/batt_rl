@@ -59,7 +59,7 @@ the number of active nodes. A reinforcement learning (RL) based simualated envir
 configuration of Jindo Bridge (i.e. a cable stayed bridge in Korea). The following figure shows the 112 senosr node configuration.
 
 .. image:: /doc/figures/jindo-bridge.png
-    :width: 800
+    :width: 600
     :alt: Jindo Bridge sensor node configuration
 
 Following uncertainties are considered to simuate the realistic environment:
@@ -78,7 +78,7 @@ at different sensor node configuration.
 c. Uncertaining in wireless communication is included in the model.
 
 .. image:: /doc/figures/training.png
-    :width: 800
+    :width: 600
     :alt: Training results
 
 
