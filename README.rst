@@ -65,9 +65,10 @@ model uses solar energy profile created
 The 
 training and test results show the prominence of this algorithm in achieving effective battery health management systems.
 
-.. image:: Downloads/jindo bridge.jpg
+.. image:: C:/Users/tahsi/Downloads/jindo bridge.jpg
     :width: 400
     :alt: Jindo Bridge sensor node configuration
+
 To this end, a reinforcement learning (RL) based framework for active control of the battery degradation at the WSN system level is 
 propsed in this study with the aim of the battery group replacement. A comprehensive simulation environment was developed in a real-life 
 WSN setup, i.e. WSN for a cable-stayed bridge SHM, considering various practical uncertainties. The RL agent was trained under a developed 
