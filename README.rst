@@ -74,7 +74,7 @@ health at the network level. The agent is trained for 30 days period (with 3 hr 
 days data. During training, uniform battery degradation and maximization of the active duty cycle receive positive rewards. To this end, 
 the training and test results show the prominence of this algorithm in achieving effective battery health management of the WSN for SHM.
 
-.. image:: /doc/figure/jindo-bridge.png
+.. image:: /doc/figures/jindo-bridge.png
     :width: 400
     :alt: Jindo Bridge sensor node configuration
 
