@@ -133,3 +133,7 @@ Credits
 2. To create python package for modal analysis of beam, the algorithm of strid_ (basically developed for shear frame) is followed:
      
      .. _strid: https://github.com/Gunnstein/strid
+
+3. The Webpage `index.html` for the project is created with the help of a template from cplmakerlab_
+
+    .. _cplmakerlab: https://github.com/cplmakerlab/simple-website-template
