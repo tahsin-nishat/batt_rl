@@ -65,17 +65,20 @@ configuration of Jindo Bridge (i.e. a cable stayed bridge in Korea). The followi
 Following uncertainties are considered to simuate the realistic environment:
 
 a. The sensors are rechargeable with solar power. Solar energy varies at different days of the year depending on the weather. To include 
-the solar power variability, using System Advisor Model (SAM) solar profile data is generated for 2013 to 2019. These data are used during 
-training and testing of the model.
+   the solar power variability, using System Advisor Model (SAM) solar profile data is generated for 2013 to 2019. These data are used during 
+   training and testing of the model.
 
 b. Solar harvesting uncertainties due to spatial variation is considered. The following figure represents the solar harvesting uncertainties 
-at different sensor node configuration.
+   at different sensor node configuration.
 
 .. image:: /doc/figures/solar-harvesting-uncertainties.png
     :width: 800
     :alt: Solar Harvesting Uncertainties at diiferent sensor node location
 
+
 c. Uncertaining in wireless communication is included in the model.
+
+d. gg
 
 .. image:: /doc/figures/training.png
     :width: 600
