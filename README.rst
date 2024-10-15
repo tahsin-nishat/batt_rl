@@ -1,9 +1,8 @@
-================================
-Active Battery Health Management
-================================
+==============================================================
+Adaptive Battery Health Management of Wireless Sensor Network
+==============================================================
 
-
-Project summary
+Summary of the Study
 ----------------
 The Internet of Things (IoT) has become one of the major future trends. Its proliferation has led to an explosive number of battery powered
 wireless devices. Battery life has always been one of the biggest limiting factors of those wireless devices which poses different challenges
